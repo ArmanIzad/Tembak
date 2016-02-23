@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects.Cards
   {
-  interface IRoleCard : ICard
+  public interface IRoleCard : ICard
     {
     Roles Role { get; set; }
     }

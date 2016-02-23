@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects
   {
-  interface ICard
+  public interface ICard
     {
     int Id { get; set; }
     string Name { get; set; }

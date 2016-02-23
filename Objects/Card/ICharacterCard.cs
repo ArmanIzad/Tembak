@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects.Cards
   {
-  interface ICharacterCard : ICard
+  public interface ICharacterCard : ICard
     {
     int MaxLife { get; set; }
     }

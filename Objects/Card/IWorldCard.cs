@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects.Cards
   {
-  interface IWorldCard : ICard
+  public interface IWorldCard : ICard
     {
     }
   }

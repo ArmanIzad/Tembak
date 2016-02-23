@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects.Cards
   {
-  interface IPlayCard : ICard
+  public interface IPlayCard : ICard
     {
     CardData.PlayCardType CardType { get; set; }
     CardData.Suits Suit { get; set; }
 
     //number? forgot
+
+    bool NeedATarget { get; set; }
     }
   }

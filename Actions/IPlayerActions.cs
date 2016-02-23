@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects
   {
-  interface IPlayerActions
+  public interface IPlayerActions
     {
     void StartTurn();
     void UseAbility();

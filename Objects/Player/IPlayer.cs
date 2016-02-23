@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects
   {
-  interface IPlayer
+  public interface IPlayer
     {
     int Id { get; set; }
     int Name { get; set; }

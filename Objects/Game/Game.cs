@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bang_.Objects
+namespace Bang_.Objects.Game
   {
   class Game
     {
+    //int is the identifier of the player, starts from 1 (should be sheriff)
     SortedList<int, IPlayer> Players { get; set; }
     Stack<IWorldCard> WorldCard { get; set; }
     IList<IPlayCard> DrawPile { get; set; }
@@ -17,6 +18,10 @@ namespace Bang_.Objects
 
     ITurnActions GameActions { get; set; }
 
+    //delegates
+    //public delegate void EndTurnDelegate();
+
+    private int m_turn = 0;
     public bool SetupGameWorld()
       {
       return SetupPlayers() && SetupRoles() && SetupCharacters() && SetupDrawPile() && SetupWorldCard();
@@ -24,28 +29,39 @@ namespace Bang_.Objects
 
     public void StartGame()
       {
-      int turn = 1; 
+      //m_turn = 1;
+
+      var current_player = Players.Values[m_turn];
+      //current_player.Actions.StartTurn
+
+      //this doesnt work
       //game loop
-      while(!HasGameEnded())
+      while (!HasGameEnded())
         {
         int player_turn = 1;
         while(player_turn <= Players.Count)
           {
-          var current_player = Players.Values[player_turn];
-          player_turn++;
-          if (current_player.CurrentLifePoints == 0)
-            continue;
+          //var current_player = Players.Values[player_turn];
+          //player_turn++;
+          //if (current_player.CurrentLifePoints == 0)
+          //  continue;
 
-          GameActions.PreTurn();
-          GameActions.StartTurn();
-          GameActions.DrawPhase();
-          GameActions.Play();
-          GameActions.EndTurn();
-          GameActions.PostTurn();
+          //GameActions.PreTurn();
+          //GameActions.StartTurn();
+          //GameActions.DrawPhase();
+          //GameActions.Play();
+          //GameActions.EndTurn();
+          //GameActions.PostTurn();
           }
 
-        turn++;
+        m_turn++;
         }
+      }
+
+    public void NextTurn()
+      {
+      m_turn++;
+      var current_player = Players.Values[m_turn];
       }
 
     //game ends when sheriff is dead or all outlaws and renegades are dead

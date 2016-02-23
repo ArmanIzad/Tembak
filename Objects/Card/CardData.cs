@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects
   {
-  class CardData
+  public class CardData
     {
     public enum PlayCardType
       {

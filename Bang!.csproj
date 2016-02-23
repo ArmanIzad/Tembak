@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Objects\Game\ITurnActions.cs" />
-    <Compile Include="Objects\Player\IPlayerActions.cs" />
+    <Compile Include="Actions\ITurnActions.cs" />
+    <Compile Include="Actions\IPlayerActions.cs" />
     <Compile Include="Objects\Card\ICharacterCard.cs" />
     <Compile Include="Objects\Card\IRoleCard.cs" />
     <Compile Include="Objects\Card\IWorldCard.cs" />
@@ -52,6 +52,7 @@
     <Compile Include="Objects\Card\IPlayCard.cs" />
     <Compile Include="Objects\Game\Game.cs" />
     <Compile Include="Objects\Card\ICard.cs" />
+    <Compile Include="Objects\Game\IGameHelper.cs" />
     <Compile Include="Objects\Player\IPlayer.cs" />
     <Compile Include="Objects\Game\Roles.cs" />
     <Compile Include="Program.cs" />

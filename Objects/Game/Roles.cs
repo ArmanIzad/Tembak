@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bang_.Objects
   {
-  enum Roles
+  public enum Roles
     {
     Sheriff,
     Deputy,
