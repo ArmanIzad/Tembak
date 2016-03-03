@@ -10,12 +10,14 @@ namespace Bang_.Objects
   public interface IPlayer
     {
     int Id { get; set; }
-    int Name { get; set; }
+    string Name { get; set; }
     int CurrentLifePoints { get; set; }
+    int MaximumLifePoints { get; set; }
     IList<ICard> Hand { get; set; }
     IList<ICard> Table { get; set; }
     Tuple<ICharacterCard, ICharacterCard> Character { get; set; }
     IRoleCard Role { get; set; }
-    IPlayerActions Actions { get; set; }
+
+    IPlayerActions GetActions();
     }
   }

@@ -13,14 +13,16 @@ namespace Bang_.Objects
     void UseAbility();
     void SwapRole();
     void PlayCard(IPlayCard i_card_played, IPlayCard i_secondary_card = null);
-    void Respond(IPlayCard i_card_to_respond_to);
-    void Discard(IPlayCard i_card_to_discard, bool i_is_random);
+    IPlayCard Respond(IPlayCard i_card_to_respond_to);
+    IList<IPlayCard> Discard(int number, bool i_is_random);
     void RemoveCard(IPlayCard i_card_to_remove);
     void LoseLife(int i_life_points);
     void GainLife(int i_life_points);
     //Reveal your role when life is 0
     IRoleCard Reveal();
-    void Draw(IPlayCard i_card_drawn);
+    //Draw from player
+    IPlayCard Draw(IPlayer player);
+    IList<IPlayCard> Draw(int number);
     //Check for hearts or other shapes
     bool Check();
     void EndTurn();

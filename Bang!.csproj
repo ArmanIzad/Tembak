@@ -55,6 +55,7 @@
     <Compile Include="Objects\Game\IGameHelper.cs" />
     <Compile Include="Objects\Player\IPlayer.cs" />
     <Compile Include="Objects\Game\Roles.cs" />
+    <Compile Include="Objects\Player\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +63,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Factories\" />
     <Folder Include="Objects\Card\PlayCards\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
